@@ -1,0 +1,267 @@
+/*** COLORS ***/
+
+$color-primary: hsl(0, 0%, 0%);
+$color-secondary: hsl(0, 0%, 100%);
+$neutral-light: hsl(0, 0%, 90%);
+$neutral-medium-dark: hsl(0, 0%, 25%,);
+$background-primary: #bdb2ff;
+$accent-1: #fdffb6;
+
+/*** FONTS ***/
+
+$font-primary: sofia-pro, sans-serif;
+$font-secondary: input-serif, serif;
+
+/*** VARIABLES ***/
+
+$max-width-largest: 1140px;
+$padding-horizontal-content: 1.5rem;
+
+
+/*** GLOBAL STYLES ***/
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+    font-family: $font-primary;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $color-primary;
+    margin: 0px auto;
+}
+
+/*** TYPEOGRAPHY ***/
+
+h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 5rem;
+    color: $color-primary;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    color: $color-primary;
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: $color-primary;
+    padding-top: 0.5rem;
+}
+
+p {
+    padding: 1rem 0px;
+    margin: 0px;
+}
+
+/*** LAYOUT ***/
+
+.header {
+    height: 100vh;
+    background-color: $background-primary;
+    overflow: hidden;
+
+    &__block {
+        max-width: $max-width-largest;
+        margin: 0px auto;
+        padding: 1.5rem $padding-horizontal-content;
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__gallery--image {
+        max-width: 600px;
+        margin-left: 3rem;
+    }
+}
+
+.nav {
+
+    &--main {
+        background-color: $background-primary;
+        padding: 1rem;
+    }
+
+    &__container--main {
+        max-width: $max-width-largest;
+        margin: 0px auto;
+        padding: 0px $padding-horizontal-content;
+    }
+
+    &__list--main {
+        list-style: none;
+        
+    }
+
+    &__listItem--main {
+        display: inline-block;
+        margin-right: 1rem;
+
+        a {
+            text-decoration: none;
+            color: $color-primary;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.125rem;
+            text-transform: uppercase;
+            transition: color 0.5s ease;
+        }
+
+        a:hover {
+            color: $color-secondary;
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .project1 {
+    padding-top: 6.5rem;
+}
+
+.article {
+    //border: 3px solid black;
+    max-width: $max-width-largest;
+    margin: 48px auto;
+    padding: 2.5rem $padding-horizontal-content;
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__text {
+        width: 33.33%;
+        padding-left: 2rem;
+    }
+
+    &__gallery {
+        width: 66.66%;
+    }
+    
+    &__list {
+        padding-top: 1rem;
+        margin-bottom: 0;
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            font-family: $font-secondary;
+            font-size: 0.875rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        padding: 1rem 1.5rem;
+        border: 2px solid $color-primary;
+        margin: 1rem 0px 2rem;
+        color: $color-primary;
+        transition: background-color 0.5s ease;
+    }
+
+    &__link:hover {
+        background-color: $background-primary;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
+
+.section {
+    
+    &--about {
+        background-color: $color-secondary;
+    }
+
+    &--contact {
+        background-color: $background-primary;
+    }
+
+    &__block {
+        max-width: $max-width-largest;
+        margin: 0px auto;
+        padding: 5rem $padding-horizontal-content;
+        display: flex;
+
+        &--about {
+            border-top: 1px solid $color-primary;
+        }
+    }
+
+    &__block--contact {
+        
+    }
+
+    &__text {
+        width: 50%;
+        margin-right: 3rem;
+
+        &--form {
+            width: 33.33%;
+        }
+    }
+
+    &__gallery {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__form {
+        width: 66.66%;
+    }
+}
+
+.form {
+    &__label {
+        display: block;
+    }
+    &__input {
+
+    }
+    &__error {
+
+    }
+    &__textarea {
+
+    }
+}
+
+
+.footer {
+    background-color: $background-primary;
+    
+    &__block {
+        max-width: $max-width-largest;
+        margin: 0px auto;
+        padding: 0px $padding-horizontal-content;
+        border-top: 1px solid $color-primary;
+    }
+}
