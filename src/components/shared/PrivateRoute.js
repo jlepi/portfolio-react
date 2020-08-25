@@ -4,13 +4,15 @@ import isAuthenticated from '../../helpers/authHelper'
 
 const PrivateRoute = ({ children, ...rest}) => {
     return (
-        <Route
+        <div className="container--flex">
+            <Route
             {...rest}
             render={({ location }) => isAuthenticated() ? 
                 (children) : 
                 ( <Redirect to={{pathname: "/login", state: {from: location}}} /> )
             }
-        />
+            />
+        </div>
     )
 }
 
