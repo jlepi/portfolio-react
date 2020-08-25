@@ -69,6 +69,13 @@ p {
 
 /*** LAYOUT ***/
 
+.container--flex {
+    display: flex;
+}
+.container--adminPage {
+   margin: 1rem 2rem;
+}
+
 .header {
     height: 100vh;
     background-color: $background-primary;
@@ -124,6 +131,29 @@ p {
 
         a:hover {
             color: $color-secondary;
+        }
+    }
+
+    &__container--admin {
+        border-right: 1px solid $color-primary;
+        padding: 1rem 0rem;
+    }
+
+    &__listItem--admin {
+
+        a {
+            text-decoration: none;
+            color: $color-primary;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.0625rem;
+            text-transform: uppercase;
+            transition: color 0.5s ease;
+            padding: 1rem;
+        }
+
+        a:hover {
+            color: $background-primary;
         }
     }
 }

@@ -11,7 +11,7 @@ const ContactForm = () => {
 
     const formSubmit = async event => {
         event.preventDefault()
-        const response = await fetch('http://localhost:4000/contact_form/entries', {
+        const response = await fetch('http://localhost:4000/contactFormEntries', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -23,7 +23,7 @@ const ContactForm = () => {
         if (response.status >= 400) {
             alert(`Oops! Error: ${payload.message} for fields: ${payload.invalid.join(",")}`)
         } else {
-            alert(`Congrats! Submission submitted with id: ${payload.id}`)
+            alert(`Success! Message has been submitted. `)
         }
     }
 
@@ -39,7 +39,7 @@ const ContactForm = () => {
                 <FormGroup row>
                     <Label for="phoneEntry" sm={2}>Phone Number</Label>
                     <Col sm={10}>
-                    <Input type="phone" name="phone" id="phoneEntry" placeholder="Enter phone number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)}/>
+                    <Input type="tel" name="phone" id="phoneEntry" placeholder="Enter phone number" required value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)}/>
                     </Col>
                 </FormGroup>
                 <FormGroup row>

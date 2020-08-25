@@ -48,6 +48,14 @@ p {
 }
 
 /*** LAYOUT ***/
+.container--flex {
+  display: flex;
+}
+
+.container--adminPage {
+  margin: 1rem 2rem;
+}
+
 .header {
   height: 100vh;
   background-color: #bdb2ff;
@@ -94,6 +102,23 @@ p {
 }
 .nav__listItem--main a:hover {
   color: white;
+}
+.nav__container--admin {
+  border-right: 1px solid black;
+  padding: 1rem 0rem;
+}
+.nav__listItem--admin a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  transition: color 0.5s ease;
+  padding: 1rem;
+}
+.nav__listItem--admin a:hover {
+  color: #bdb2ff;
 }
 
 .sticky {
