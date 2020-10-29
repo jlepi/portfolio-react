@@ -12,7 +12,7 @@ const Login = () => {
     const loginSubmit = async event => {
         
         event.preventDefault()
-        const response = await fetch('http://localhost:4000/auth', {
+        const response = await fetch(process.env.REACT_APP_API + '/auth', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
