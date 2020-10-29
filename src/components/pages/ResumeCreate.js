@@ -18,7 +18,7 @@ const ResumeCreate = () => {
 
     const formSubmit = async event => {
         event.preventDefault()
-        const response = await fetch('http://localhost:4000/resume', {
+        const response = await fetch(process.env.REACT_APP_API + '/resume', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,

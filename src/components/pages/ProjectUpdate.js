@@ -20,7 +20,7 @@ const ProjectUpdate = () => {
 
     const formSubmit = async event => {
         event.preventDefault()
-        const response = await fetch('http://localhost:4000/projects/:id', {
+        const response = await fetch(process.env.REACT_APP_API + '/projects/:id', {
             method: 'PATCH',
             headers: {
                 'Authorization': `Bearer ${token}`,

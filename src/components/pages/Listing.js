@@ -9,7 +9,7 @@ const Listings = () => {
     const [listing, setListing] = useState([])
     useEffect(() => {
         const getData = async () => {
-            const response = await fetch('http://localhost:4000/contactFormEntries', {
+            const response = await fetch(process.env.REACT_APP_API + '/contactFormEntries', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`

@@ -19,7 +19,7 @@ const ProjectCreate = () => {
 
     const formSubmit = async event => {
         event.preventDefault()
-        const response = await fetch('http://localhost:4000/projects', {
+        const response = await fetch(process.env.REACT_APP_API + '/projects', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,
